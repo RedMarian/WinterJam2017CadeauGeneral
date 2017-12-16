@@ -56,6 +56,15 @@ Shader "Unlit/Background"
 				col.rgb *= smoothstep(.0,.01, frac(p.x)+p.y);
 				// float dist = length(p)*10.;
 				// col.rgb *= smoothstep(.0,.1, sin(dist-_Time.y));
+
+				p = i.uv;
+				p.x *= _ScreenParams.x/_ScreenParams.y;
+				float x = sin(10.*noiseIQ(p.xxx*10.)+_Time.y*10.);
+				float should = step((sin(_Time.y)*.5+.5)*3., abs(p.x));
+				float thin = lerp(.2, .01, should);
+				x = lerp(x, p.y, should);
+				col.rgb *= 1.-clamp(thin/abs(x-p.y*4.), 0., 1.);
+
 				return col;
 			}
 			ENDCG
