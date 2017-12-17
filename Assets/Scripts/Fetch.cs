@@ -24,12 +24,16 @@ public class Fetch : MonoBehaviour {
 	private string[] filePaths;
 	private List<Texture2D> textures;
 	private List<Buddy> buddies;
+	private ConnectManager manager;
 
 	void Start () {
 		Fecth();
+		manager = GameObject.FindObjectOfType<ConnectManager>();
 	}
 
 	void Update () {
+
+		float radius = boidRadius * 2f + (manager.HandHolding?0f:1.5f);
 
 		foreach (Buddy buddy in buddies) {
 
@@ -39,7 +43,6 @@ public class Fetch : MonoBehaviour {
 			Vector2 follow = new Vector2(0,0);
 			foreach (Buddy other in buddies) {
 				float dist = Vector2.Distance(buddy.position, other.position);
-				float radius = boidRadius * 2f;
 				Vector2 dir = buddy.position-other.position;
 				if (dist < radius && dist > 0.0001f) {
 					avoid += dir.normalized * Mathf.Max(boidRadius, dir.magnitude);
