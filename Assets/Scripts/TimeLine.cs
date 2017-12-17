@@ -59,4 +59,33 @@ public class TimeLine : MonoBehaviour {
 		vidplay.Play ();
 		yield return null;
 	}
+
+	public IEnumerator TimeLineNeckbreack(){
+		vidClip = vidContainer.clips [5];
+		vidplay.Play ();
+		yield return null;
+	}
+
+	public IEnumerator TimeLineSerpentine(){
+		vidClip = vidContainer.clips [6];
+		vidplay.Play ();
+		yield return null;
+	}
+
+	public IEnumerator TimeLineBanderole(){
+		vidClip = vidContainer.clips [7];
+		vidplay.Play ();
+		yield return null;
+	}
+
+	public IEnumerator TimeLineToLine(){
+		vidClip = vidContainer.clips [8];
+		vidplay.Play ();
+		yield return new WaitForSeconds((float)vidClip.length);
+		//Faire apparaitre la ligne, l'animer pour qu'elle vible beaucoup sur toute la longueur, puis moins, puis plus du tout sauf au dessus du personnag du milieu
+		//Une fois ça fini, lancer la video de transformation en piques
+		/*vidClip = vidContainer.clips [9];
+		vidplay.Play ();*/
+	}
+
 }
