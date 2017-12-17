@@ -5,13 +5,18 @@ using UnityEngine.Video;
 
 public class TimeLine : MonoBehaviour {
 
-	bool boolH;
+	public Animator animator;
+	public Animator animatorTentacles;
+
+	bool holdingHands;
 	VideoPlayer vidplay;
 	VideoClip vidClip;
 	Video vidContainer;
+	ConnectManager manager;
 
 	void Start () {
-		boolH = this.gameObject.GetComponent<ConnectManager> ().HandHolding;
+		manager = gameObject.GetComponent<ConnectManager>();
+		holdingHands = manager.HandHolding;
 		vidplay = this.gameObject.GetComponent<VideoPlayer> ();
 		vidClip = vidplay.clip;
 		vidContainer = this.gameObject.GetComponent<Video> ();
@@ -20,34 +25,38 @@ public class TimeLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		holdingHands = manager.HandHolding;
+		animator.SetBool("HoldingOn", holdingHands);
+		if(animator.GetCurrentAnimatorStateInfo(0).IsName("04_GoingTentacles")) {
+			animatorTentacles.SetBool("Holdin", true);
+		}
 	}
 
 	IEnumerator TheTimeLineStart(){
-		yield return new WaitForSeconds(5);
-		if (!boolH) {
-			vidClip = vidContainer.clips [0];
+		// yield return new WaitForSeconds(5);
+		// if (!holdingHands) {
+			vidplay.clip = vidContainer.clips [0];
 			vidplay.Play ();
-			yield return new WaitForSeconds((float)vidClip.length);
-			while (!boolH) {
-				vidClip = vidContainer.clips [1];
-				vidplay.Play ();
+			yield return new WaitForSeconds((float)vidplay.clip.length);
+			vidplay.clip = vidContainer.clips [1];
+			vidplay.Play ();
+			while (!holdingHands) {
+				yield return null;
 			}
-			if (boolH) {
-				vidClip = vidContainer.clips [2];
-				vidplay.Play ();
-				yield return new WaitForSeconds ((float)vidClip.length);
-			}
-		} //else if (boolH) {
+			vidplay.clip = vidContainer.clips [2];
+			vidplay.Play ();
+			vidplay.isLooping = false;
+			yield return new WaitForSeconds ((float)vidplay.clip.length);
+		// } //else if (holdingHands) {
 		//	vidClip = vidContainer.clips [0];
 		//	vidplay.Play ();
 		//}
 
-		yield return new WaitForSeconds((float)vidClip.length);
+		yield return new WaitForSeconds((float)vidplay.clip.length);
 	}
 
 	public IEnumerator TimeLineTouribillon(){
-		while (boolH) {
+		while (holdingHands) {
 			vidClip = vidContainer.clips [3];
 			vidplay.Play ();
 		}
