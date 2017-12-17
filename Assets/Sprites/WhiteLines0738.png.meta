@@ -1,10 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 834136efb610417409793db46a67714b
 timeCreated: 1513462732
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
+=======
+guid: 7cbb966e962bb464a85e3837b9300460
+timeCreated: 1513456675
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -13,8 +21,11 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+<<<<<<< HEAD
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
+=======
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -30,6 +41,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+<<<<<<< HEAD
     serializedVersion: 2
     filterMode: -1
     aniso: -1
@@ -41,6 +53,16 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
+=======
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,7 +72,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
+<<<<<<< HEAD
   textureType: 0
+=======
+  textureType: 8
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -58,7 +84,42 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+<<<<<<< HEAD
     resizeAlgorithm: 0
+=======
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -69,7 +130,10 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
+<<<<<<< HEAD
     physicsShape: []
+=======
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   spritePackingTag: 
   userData: 
   assetBundleName: 

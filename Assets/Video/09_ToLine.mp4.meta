@@ -1,9 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d0c6876e665a1f941805179172060c8e
 timeCreated: 1513462733
 licenseType: Free
 VideoClipImporter:
   externalObjects: {}
+=======
+guid: fae095d605718a247b777de0826eb6fe
+timeCreated: 1513456678
+licenseType: Free
+VideoClipImporter:
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   serializedVersion: 2
   useLegacyImporter: 0
   quality: 0.5
@@ -22,8 +29,11 @@ VideoClipImporter:
   sourceHasAlpha: 0
   flipVertical: 0
   flipHorizontal: 0
+<<<<<<< HEAD
   pixelAspectRatioNumerator: 1
   pixelAspectRatioDenominator: 1
+=======
+>>>>>>> e8c88a6426ba4ce25ff7037d77dfba7e3e11fb39
   importAudio: 0
   sourceAudioChannelCount: 
   sourceAudioSampleRate: 
